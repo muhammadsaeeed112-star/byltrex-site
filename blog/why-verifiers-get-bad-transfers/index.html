@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Why Verifiers Keep Getting Bad Transfers (and How to Fix Each Cause) | Byltrex</title>
+<meta name="description" content="Most bad transfers in a call center come from seven causes: answering machines past AMD, call-screening apps, dead air, rushed fronters, weak qualifying questions, long transfer queues and blank lead screens. Here is the fix for each.">
+<meta name="author" content="Muhammad, Byltrex">
+<meta name="robots" content="index, follow, max-snippet:-1">
+<meta name="theme-color" content="#0A0C0F">
+<link rel="canonical" href="https://www.byltrex.com/blog/why-verifiers-get-bad-transfers/">
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+<meta property="og:title" content="Why your verifiers keep getting bad transfers (and how to fix each cause)">
+<meta property="og:description" content="Seven causes of bad transfers, from answering machines past AMD to blank lead screens, and the fix for each.">
+<meta property="og:url" content="https://www.byltrex.com/blog/why-verifiers-get-bad-transfers/">
+<meta property="og:site_name" content="Byltrex">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://www.byltrex.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Byltrex: AI fronter bots for VICIdial call centers">
+<meta property="article:published_time" content="2026-11-11">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Why your verifiers keep getting bad transfers">
+<meta name="twitter:description" content="Seven causes of bad transfers and the fix for each.">
+<meta name="twitter:image" content="https://www.byltrex.com/og-image.png">
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"Article","@id":"https://www.byltrex.com/blog/why-verifiers-get-bad-transfers/#article","headline":"Why your verifiers keep getting bad transfers (and how to fix each cause)","description":"Most bad transfers in a call center come from seven causes: answering machines past AMD, call-screening apps, dead air, rushed fronters, weak qualifying questions, long transfer queues and blank lead screens. Here is the fix for each.","author":{"@id":"https://www.byltrex.com/#founder"},"publisher":{"@id":"https://www.byltrex.com/#org"},"image":"https://www.byltrex.com/og-image.png","datePublished":"2026-11-11","dateModified":"2026-11-11","mainEntityOfPage":"https://www.byltrex.com/blog/why-verifiers-get-bad-transfers/","about":["Call center transfers","Verifiers","Answering machine detection","VICIdial"]},
+{"@type":"Person","@id":"https://www.byltrex.com/#founder","name":"Muhammad","jobTitle":"Founder","worksFor":{"@id":"https://www.byltrex.com/#org"},"description":"Founder of Byltrex; five years on call-center floors."},
+{"@type":"Organization","@id":"https://www.byltrex.com/#org","name":"Byltrex","url":"https://www.byltrex.com/","logo":"https://www.byltrex.com/apple-touch-icon.png","email":"muhammad@byltrex.com"},
+{"@type":"FAQPage","@id":"https://www.byltrex.com/blog/why-verifiers-get-bad-transfers/#faq","mainEntity":[
+{"@type": "Question", "name": "What is a bad transfer in a call center?", "acceptedAnswer": {"@type": "Answer", "text": "A bad transfer is a call that reaches a verifier or closer but should not have: an answering machine, a call-screening app, dead air, a caller who doesn't qualify or can't continue in English, or a real customer who hangs up before the verifier answers."}},
+{"@type": "Question", "name": "How do I reduce bad transfers in VICIdial?", "acceptedAnswer": {"@type": "Answer", "text": "Have verifiers disposition every transfer with a reason, then fix the biggest cause first: tune AMD on real recordings, add a machine and screener check at the fronter, ask one fact per qualifying question, match transfers to verifier capacity with a maximum hold time, and transfer straight into the verifier in-group so the lead record comes with the call."}},
+{"@type": "Question", "name": "Can answering machine detection catch every machine?", "acceptedAnswer": {"@type": "Answer", "text": "No. AMD guesses from the first seconds of a call, so some voicemail greetings get through and an aggressive setting hangs up on real people. A second check by the fronter, human or bot, catches most of what AMD misses."}},
+{"@type": "Question", "name": "Do AI fronter bots stop bad transfers?", "acceptedAnswer": {"@type": "Answer", "text": "They help with the causes that depend on the fronter: machines past AMD, call screeners, skipped questions and weak qualifying. They do not fix dialer and transfer settings such as long queues or blank lead screens. Those need fixing either way."}}
+]}
+]}
+</script>
+
+<link rel="preload" href="/fonts/space-grotesk-600.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/inter-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/site.css?v=1">
+
+<style>
+:root{--bg:#0A0C0F;--bg2:#0D1014;--card:#11151A;--line:#1C2128;--line2:#2A313B;--w:#FFFFFF;--t:#E8ECF1;--dim:#B3BBC5;--mute:#8C95A1;--acc:#B6F23C;--acc35:rgba(182,242,60,.35);
+--fd:'Space Grotesk',system-ui,sans-serif;--fb:'Inter',system-ui,sans-serif;--fm:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--t);font-family:var(--fb);font-size:17px;line-height:1.75;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--acc);outline-offset:3px;border-radius:6px}
+h1,h2,h3{font-family:var(--fd);color:var(--w)}
+.brand{display:inline-flex;align-items:center;gap:10px;color:var(--w)}
+.brand svg{width:36px;height:36px;flex-shrink:0;border-radius:9px;box-shadow:0 0 0 1px var(--line2)}
+.brand span{font-family:var(--fd);font-weight:700;font-size:20px;letter-spacing:-.02em}
+header{position:sticky;top:0;z-index:50;background:rgba(10,12,15,.85);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+html{scroll-padding-top:88px}
+.nav-links{display:flex;align-items:center;gap:28px;font-size:15px}
+.nav-links a:not(.btn){color:var(--dim);transition:color .2s}
+.nav-links a:not(.btn):hover{color:var(--w)}
+@media(max-width:820px){.nav-links a:not(.btn){display:none}header{backdrop-filter:none;-webkit-backdrop-filter:none;background:rgba(10,12,15,.96)}}
+article p a{color:var(--acc);text-decoration:underline;text-underline-offset:3px}
+.tm{max-width:1200px;margin:0 auto;padding:0 24px 32px;font-size:13px;color:var(--mute)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:14px 24px;max-width:1200px;margin:0 auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 20px;border-radius:10px;font-weight:600;font-size:15px;background:var(--acc);color:#0A0C0F;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(182,242,60,.22)}
+.btn-lg{min-height:56px;padding:0 32px;font-size:17px;border-radius:12px}
+.chip{display:inline-flex;align-items:center;font-family:var(--fm);font-weight:500;font-size:12px;line-height:1;letter-spacing:.06em;padding:4px 8px;border-radius:6px;border:1px solid var(--line2);color:var(--mute);white-space:nowrap;vertical-align:2px}
+.chip.go{background:var(--acc);border-color:var(--acc);color:#0A0C0F}
+
+article{max-width:760px;margin:0 auto;padding:80px 24px 40px}
+.back{display:inline-flex;align-items:center;gap:8px;font-size:15px;color:var(--mute);margin-bottom:36px;min-height:44px}
+.back:hover{color:var(--w)}
+.meta{display:flex;gap:12px;align-items:center;flex-wrap:wrap;font-size:14px;color:var(--mute);margin-bottom:20px}
+article h1{font-weight:600;font-size:clamp(36px,5vw,54px);line-height:1.06;letter-spacing:-.035em;margin-bottom:22px;text-wrap:balance}
+.intro{font-size:20px;line-height:1.6;color:var(--dim);margin-bottom:48px}
+article h2{font-weight:700;font-size:clamp(24px,3vw,30px);line-height:1.2;letter-spacing:-.02em;margin:56px 0 16px;text-wrap:balance}
+article p{color:var(--dim);margin-bottom:20px}
+article p strong{color:var(--t);font-weight:600}
+article ul{margin:0 0 24px 0;padding-left:0;list-style:none}
+article li{position:relative;padding-left:24px;color:var(--dim);margin-bottom:12px}
+article li::before{content:"";position:absolute;left:4px;top:.72em;width:6px;height:6px;border-radius:50%;background:var(--acc)}
+article li strong{color:var(--t);font-weight:600}
+figure{margin:36px 0;padding:24px;background:var(--card);border:1px solid var(--line2);border-radius:16px}
+figure svg{width:100%;height:auto;display:block}
+figcaption{margin-top:14px;font-size:14px;color:var(--mute)}
+.callout{margin:36px 0;padding:22px 24px;border:1px solid var(--line2);border-left:none;border-radius:14px;background:var(--card);font-size:16px;color:var(--dim)}
+.callout b{color:var(--w)}
+.end{max-width:760px;margin:24px auto 0;padding:0 24px 112px}
+.end-box{border:1px solid var(--line2);border-radius:20px;background:var(--card);padding:40px;display:flex;flex-direction:column;align-items:flex-start;gap:16px}
+.end-box h2{font-weight:700;font-size:clamp(26px,3.4vw,36px);line-height:1.1;letter-spacing:-.03em;text-wrap:balance}
+.end-box p{color:var(--dim)}
+.note{font-size:14px;color:var(--mute)}
+footer{border-top:1px solid var(--line)}
+.foot{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;padding:40px 24px;max-width:1200px;margin:0 auto}
+.foot .brand svg{width:30px;height:30px;border-radius:8px}
+.foot .brand span{font-size:17px}
+.foot-links{display:flex;gap:24px;flex-wrap:wrap;font-size:15px}
+.foot-links a{color:var(--dim)}
+.foot-links a:hover{color:var(--w)}
+.copy{font-size:14px;color:var(--mute)}
+@media(max-width:480px){.brand svg{width:32px;height:32px}.brand span{font-size:18px}article{padding-top:48px}.end-box{padding:28px}}
+
+.answer{margin:0 0 36px;padding:24px 26px;background:var(--card);border:1px solid rgba(182,242,60,.35);border-radius:16px}
+.answer p{margin:0;color:var(--t);font-size:18px;line-height:1.65}
+.answer .answer-l{font-family:var(--fm);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--acc);margin-bottom:10px}
+.faq{display:flex;flex-direction:column;gap:12px;margin-top:8px}
+.faq details{background:var(--card);border:1px solid #1F252D;border-radius:14px}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:18px 22px;min-height:44px;font-family:var(--fd);font-weight:600;font-size:17px;color:var(--w)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary svg{flex-shrink:0;transition:transform .2s;stroke:var(--mute)}
+.faq details[open] summary svg{transform:rotate(45deg);stroke:var(--acc)}
+.faq .a{padding:0 22px 20px;color:var(--dim);margin:0}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><symbol id="bmark" viewBox="0 0 100 100"><rect width="100" height="100" rx="25" fill="#0A0C0F"/><path transform="translate(22.00 20.00) scale(0.09105)" fill="#B6F23C" fill-rule="evenodd" d="M0.0 329.5L0.0 0.0L204.2 0.0C326.7 0.0 414.1 0.4 422.5 1.0C455.6 3.3 481.7 9.8 505.1 21.6C554.3 46.2 583.6 88.5 591.1 146.0C592.9 160.0 592.6 195.0 590.6 208.5C583.1 257.5 563.5 287.6 523.4 311.6C522.4 312.3 521.7 313.0 522.0 313.2C522.3 313.5 526.8 315.8 532.0 318.5C546.1 325.6 559.4 334.7 569.8 344.5C593.3 366.6 606.5 392.8 612.7 429.9C615.2 444.9 615.2 486.6 612.7 503.0C603.5 561.5 575.6 604.2 529.2 630.4C502.5 645.5 466.8 655.5 430.3 658.0C421.1 658.6 336.3 659.0 207.8 659.0L0.0 659.0L0.0 329.5ZM429.6 536.2C459.7 529.7 477.0 510.2 480.9 478.5C483.2 459.4 481.6 435.7 477.0 422.6C471.3 406.1 458.8 393.6 441.4 387.0C428.1 382.0 428.5 382.0 280.2 382.0L142.0 382.0L142.0 459.8C142.0 502.6 142.3 537.9 142.6 538.3C142.9 538.6 205.6 538.7 281.8 538.5C414.7 538.1 420.9 538.0 429.6 536.2ZM419.5 257.7C436.2 252.7 447.4 243.6 453.9 229.9C459.9 217.3 461.3 208.6 460.7 186.7C460.3 167.1 459.2 161.0 454.2 151.0C450.4 143.1 440.8 134.0 431.8 129.6C417.6 122.7 423.8 123.0 275.5 123.0L142.0 123.0L142.0 191.5L142.0 260.0L277.8 259.8C404.6 259.5 413.9 259.4 419.5 257.7Z"/></symbol>
+    <symbol id="bonly" viewBox="0 0 100 100"><path transform="translate(22.00 20.00) scale(0.09105)" fill="#B6F23C" fill-rule="evenodd" d="M0.0 329.5L0.0 0.0L204.2 0.0C326.7 0.0 414.1 0.4 422.5 1.0C455.6 3.3 481.7 9.8 505.1 21.6C554.3 46.2 583.6 88.5 591.1 146.0C592.9 160.0 592.6 195.0 590.6 208.5C583.1 257.5 563.5 287.6 523.4 311.6C522.4 312.3 521.7 313.0 522.0 313.2C522.3 313.5 526.8 315.8 532.0 318.5C546.1 325.6 559.4 334.7 569.8 344.5C593.3 366.6 606.5 392.8 612.7 429.9C615.2 444.9 615.2 486.6 612.7 503.0C603.5 561.5 575.6 604.2 529.2 630.4C502.5 645.5 466.8 655.5 430.3 658.0C421.1 658.6 336.3 659.0 207.8 659.0L0.0 659.0L0.0 329.5ZM429.6 536.2C459.7 529.7 477.0 510.2 480.9 478.5C483.2 459.4 481.6 435.7 477.0 422.6C471.3 406.1 458.8 393.6 441.4 387.0C428.1 382.0 428.5 382.0 280.2 382.0L142.0 382.0L142.0 459.8C142.0 502.6 142.3 537.9 142.6 538.3C142.9 538.6 205.6 538.7 281.8 538.5C414.7 538.1 420.9 538.0 429.6 536.2ZM419.5 257.7C436.2 252.7 447.4 243.6 453.9 229.9C459.9 217.3 461.3 208.6 460.7 186.7C460.3 167.1 459.2 161.0 454.2 151.0C450.4 143.1 440.8 134.0 431.8 129.6C417.6 122.7 423.8 123.0 275.5 123.0L142.0 123.0L142.0 191.5L142.0 260.0L277.8 259.8C404.6 259.5 413.9 259.4 419.5 257.7Z"/></symbol>
+  </defs></svg>
+
+<header>
+  <div class="nav">
+    <a href="/" class="brand" aria-label="Byltrex home"><svg aria-hidden="true"><use href="#bmark"/></svg><span>Byltrex</span></a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="/#services">Services</a>
+      <a href="/#how">How it works</a>
+      <a href="/#insights">Insights</a>
+      <a href="/#faq">FAQ</a>
+      <a href="/#get-started" class="btn">Get Started</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<article>
+  <a href="/#insights" class="back">← All insights</a>
+  <div class="meta"><span class="chip">TRANSFERS</span><span>By Muhammad, Founder</span><span>·</span><time datetime="2026-11-11">Nov 11, 2026</time><span>·</span><span>7 min read</span></div>
+  <h1>Why your verifiers keep getting bad transfers (and how to fix each cause)</h1>
+
+  <div class="answer">
+    <p class="answer-l">Short answer</p>
+    <p>Most bad transfers come from seven causes: answering machines that get past AMD, call-screening apps, dead air, fronters who rush or skip questions, qualifying questions that don't really qualify, callers who hang up in the transfer queue, and transfers that land on the verifier's screen as a blank lead. Each one has its own fix in your script, your dialer settings or your transfer setup.</p>
+  </div>
+
+  <p class="intro">A bad transfer costs three times: the verifier's minutes, the buyer's rejection, and the lead you already paid for. The good news is that bad transfers are rarely random. They come from a handful of causes you can find in your recordings and fix one at a time.</p>
+
+  <h2>What counts as a bad transfer?</h2>
+  <p>A bad transfer is any call that reaches a verifier but should not have: a machine, a call screener, silence, someone who doesn't qualify, someone who can't continue in English, or a real customer who is lost before the verifier can talk to them. The simplest test is to ask your verifiers to mark every transfer as accepted or rejected, with a reason. After one shift you'll know which of the causes below is costing you most.</p>
+
+  <h2>1. Why do answering machines still reach verifiers?</h2>
+  <p><strong>Because no answering machine detection (AMD) is perfect.</strong> VICIdial's AMD listens to the first seconds of a call and guesses whether a person or a machine answered. Long, natural-sounding voicemail greetings fool it, and if it is tuned too aggressively it starts hanging up on real people who answer slowly.</p>
+  <p><strong>Fix:</strong> tune AMD on real recordings, not defaults, and add a second check at the fronter. A fronter, human or bot, should recognise "leave a message after the tone", long greetings and beeps, and end those calls as answering machines instead of transferring them. In your reports, VICIdial marks machines its AMD caught as <span class="chip">AA</span> and the fronter marks the rest as <span class="chip">A</span>, so you can see which filter missed.</p>
+
+  <h2>2. Why do call-screening apps cause bad transfers?</h2>
+  <p><strong>Because they sound like a person asking a question.</strong> Phone features such as Google's Call Screen and iPhone's Live Voicemail, plus carrier screening services, answer the call and ask who is calling and why. A fronter who hears "who's calling?" and treats it as an interested customer transfers a robot to your verifier.</p>
+  <p><strong>Fix:</strong> train fronters (and set bot rules) to recognise screener phrases such as "the person you're calling is using a screening service" or "please state your name and why you're calling". Treat those calls as answering machines. Never transfer a call on "who is this?" alone.</p>
+
+  <h2>3. Why do verifiers pick up to dead air?</h2>
+  <p><strong>Usually because the customer is already gone.</strong> The three common causes are: the customer hung up while the transfer was ringing, the call sat in the in-group queue too long, or the audio is one-way so the verifier can't hear a customer who is still there.</p>
+  <p><strong>Fix:</strong> check a few dead-air recordings to see which one it is. Hang-ups in the queue point to cause 6. Customers you can hear on the fronter leg but not on the verifier leg point to audio or codec settings between your servers and carrier. Never let a fronter transfer a call where the customer has gone silent.</p>
+
+  <h2>4. Why do fronters transfer callers who don't qualify?</h2>
+  <p><strong>Because the job rewards transfers, not good transfers.</strong> When fronters are measured on transfer count, they rush the script, skip the hard question, or push through someone who said "not interested". Tired fronters late in a shift do the same without meaning to.</p>
+  <p><strong>Fix:</strong> measure fronters on <em>accepted</em> transfers, not total transfers, and listen to a sample of each fronter's transfers every week. Keep the qualifying script short enough that nobody is tempted to skip it.</p>
+
+  <h2>5. Why do "qualified" callers turn out not to qualify?</h2>
+  <p><strong>Because the question let them say yes without meaning it.</strong> Questions that ask two things at once ("Are you over 65 and already on Medicare?") or that sound like small talk get a polite "yes" from people who are just listening. Language is the other trap: a caller who answers "yes" to everything may not be following the conversation in English.</p>
+  <p><strong>Fix:</strong> ask one fact per question and confirm the key one in different words (for Medicare, "Do you have your red, white and blue card?"). If the caller can't continue in English, end the call politely or route it to a team that speaks their language. Don't send it to an English-only verifier.</p>
+
+  <h2>6. Why do good customers hang up before the verifier answers?</h2>
+  <p><strong>Because they are waiting too long.</strong> If your fronters or bots produce more transfers than your verifiers can take, calls stack up in the in-group and customers hang up on hold. That turns your best leads into bad transfers.</p>
+  <p><strong>Fix:</strong> match transfer volume to verifier capacity. Slow the dial level when verifiers are busy, and set a maximum hold time on the in-group so a waiting call goes to a callback or a message instead of silence.</p>
+
+  <h2>7. Why does the verifier see a blank lead after a transfer?</h2>
+  <p><strong>Because the transfer lost the lead record.</strong> In VICIdial, how you transfer matters. Sending the call to an in-group the right way carries the lead with it. Routing it through a DID or a caller-ID lookup can create a new, empty lead instead. The verifier then has no name or details and starts the call blind.</p>
+  <p><strong>Fix:</strong> make test transfers and check what the verifier's screen shows. If it is blank or shows a code instead of a phone number, change the transfer route so the call goes straight into the verifier in-group with its original lead.</p>
+
+  <h2>How do you measure bad transfers?</h2>
+  <p>Track one number: the share of transfers your verifiers accept. Have verifiers disposition every transfer with a reason (machine, screener, dead air, not qualified, language, hung up, blank lead). Review the reasons weekly, pull five recordings for the biggest one, and fix that cause first. Then repeat.</p>
+
+  <h2>Where does an AI fronter fit?</h2>
+  <p>An AI fronter bot helps with causes 1, 2, 4 and 5: it runs the same checks on every call, never rushes because it's tired, and records every call so you can hear why it decided what it did. It does not fix causes 3, 6 and 7 by itself. Those are dialer and transfer settings, and they need fixing whether your fronters are people or bots. <a href="/blog/how-ai-fronter-bots-work-inside-vicidial/">How AI fronter bots work inside VICIdial</a> explains the setup.</p>
+
+  <h2 id="faq">Frequently asked questions</h2>
+  <div class="faq">
+    <details>
+      <summary>What is a bad transfer in a call center?<svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></summary>
+      <p class="a">A bad transfer is a call that reaches a verifier or closer but should not have: an answering machine, a call-screening app, dead air, a caller who doesn't qualify or can't continue in English, or a real customer who hangs up before the verifier answers.</p>
+    </details>
+    <details>
+      <summary>How do I reduce bad transfers in VICIdial?<svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></summary>
+      <p class="a">Have verifiers disposition every transfer with a reason, then fix the biggest cause first: tune AMD on real recordings, add a machine and screener check at the fronter, ask one fact per qualifying question, match transfers to verifier capacity with a maximum hold time, and transfer straight into the verifier in-group so the lead record comes with the call.</p>
+    </details>
+    <details>
+      <summary>Can answering machine detection catch every machine?<svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></summary>
+      <p class="a">No. AMD guesses from the first seconds of a call, so some voicemail greetings get through and an aggressive setting hangs up on real people. A second check by the fronter, human or bot, catches most of what AMD misses.</p>
+    </details>
+    <details>
+      <summary>Do AI fronter bots stop bad transfers?<svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></summary>
+      <p class="a">They help with the causes that depend on the fronter: machines past AMD, call screeners, skipped questions and weak qualifying. They do not fix dialer and transfer settings such as long queues or blank lead screens. Those need fixing either way.</p>
+    </details>
+  </div>
+</article>
+
+<section class="end" aria-labelledby="endTitle">
+  <div class="end-box">
+    <h2 id="endTitle">Want fewer bad transfers on your floor?</h2>
+    <p>Tell us your dialer and campaign, and which of these causes hurts most. We'll tell you how we'd fix it.</p>
+    <a href="/#get-started" class="btn btn-lg">Get Started</a>
+    <p class="note">Reply within one business day</p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="foot">
+    <a href="/" class="brand" aria-label="Byltrex home"><svg aria-hidden="true"><use href="#bmark"/></svg><span>Byltrex</span></a>
+    <nav class="foot-links" aria-label="Footer">
+      <a href="mailto:muhammad@byltrex.com">muhammad@byltrex.com</a>
+      <a href="/#services">Services</a>
+      <a href="/#faq">FAQ</a>
+      <a href="/#insights">Insights</a>
+      <a href="/privacy/">Privacy</a>
+    </nav>
+    <span class="copy">© <span id="yr">2026</span> Byltrex</span>
+  </div>
+  <p class="tm">VICIdial is a registered trademark of the VICIdial Group. Byltrex is not affiliated with it.</p>
+</footer>
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+</body>
+</html>
